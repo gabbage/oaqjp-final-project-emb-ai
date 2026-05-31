@@ -11,7 +11,7 @@ def emotion_analyzer():
     if response['dominant_emotion'] is None:
         return "Invalid input ! Try again"
     else:
-        return "For the given statement, the system response is 'anger': {}, 'disgust': {}, 'fear': {}, 'joy': {} and 'sadness': {}. The dominant emotion is {}".format(
+        return "For the given statement, the system response is 'anger': {}, 'disgust': {}, 'fear': {}, 'joy': {} and 'sadness': {}. The dominant emotion is <b>{}</b>".format(
                 response['anger'], response['disgust'], response['fear'], response['joy'], response['sadness'], response['dominant_emotion'])
 
 @app.route("/")
