@@ -9,7 +9,7 @@ def emotion_analyzer():
     response = emotion_detector(text_to_analyze)
 
     if response['dominant_emotion'] is None:
-        return "Invalid input ! Try again"
+        return "Invalid text! Please try again!"
     else:
         return "For the given statement, the system response is 'anger': {}, 'disgust': {}, 'fear': {}, 'joy': {} and 'sadness': {}. The dominant emotion is <b>{}</b>".format(
                 response['anger'], response['disgust'], response['fear'], response['joy'], response['sadness'], response['dominant_emotion'])

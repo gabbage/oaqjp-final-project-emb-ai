@@ -30,6 +30,13 @@ def emotion_detector(text_to_analyze):
         return_data[dominant] = highest_name
         
         return return_data
+    elif response.status_code == 400:
+        for e in emotions:
+            return_data[e] = None
+
+        return_data[dominant] = None
+
+        return return_data
 
     else:
         for e in emotions:
